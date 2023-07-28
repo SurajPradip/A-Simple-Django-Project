@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to WMS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 40px;
+            font-family: Arial, sans-serif;
+            background-image: url('../../../media/images/pexels-cup-of-couple-6956800.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .welcome-box {
+            max-width: 400px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        .btn-primary {
+            margin: 5px;
+            background-color: #ffc107;
+            border-color: #ffc107;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff9800;
+            border-color: #ff9800;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-box">
+        <div class="header">
+            <h1>Welcome to WMS</h1>
+        </div>
+        {% if user.is_authenticated %}
+            <p>Welcome, {{ user.username }}!</p>
+            <a href="{% url 'dashboard' %}" class="btn btn-primary">Dashboard</a>
+            <a href="{% url 'logout' %}" class="btn btn-primary">Logout</a>
+        {% else %}
+            <a href="{% url 'register' %}" class="btn btn-primary">Register</a>
+            <a href="{% url 'login' %}" class="btn btn-primary">Log In</a>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+    <title> Product Added </title>
+</head>
+<body>
+    <h1> Your Product has been added to the dashboard</h1>
+    <p>Product Details are given below</p>
+        <li>
+            <p>Product name : {{product.name}}</p>
+            <p>Product price : {{product.price}}</p>
+            <p>Product SKU : {{product.SKU}}</p>
+            <p>Product description : {{product.description}}</p>
+        </li>
+    <a href="{% url 'dashboard' %}" class="btn btn-primary">Dashboard</a>
+</body>
+</html>

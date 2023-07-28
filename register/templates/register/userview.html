@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+    <style>
+        body {
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        .user-list {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .user-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .user-id {
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .user-name {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .user-email {
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="user-list">
+        <h1>User List</h1>
+        <ul>
+            {% for user in users %}
+            <li class="user-item">
+                <p class="user-id">User ID: {{ user.id }}</p>
+                <p class="user-name">Username: {{ user.username }}</p>
+                <p>First Name: {{ user.first_name }}</p>
+                <p>Last Name: {{ user.last_name }}</p>
+                <p class="user-email">Email: {{ user.email }}</p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

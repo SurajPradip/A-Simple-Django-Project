@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Images</title>
+    <style>
+        /* Style to restrict image size to 200x200 pixels */
+        img {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+
+        /* Grid container for the images */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+            background-color: #f5f5f5; /* Complementary background color */
+            padding: 20px; /* Add some padding to the grid container */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow for the grid container */
+        }
+
+        /* Style for individual image containers */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background-color: #ffffff; /* Background color for each image container */
+            border-radius: 5px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Shadow for each image container */
+        }
+
+        /* Style for the product name text */
+        .product-name {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product Images</h1>
+    <div class="grid-container">
+        {% for image in images %}
+        <div class="image-container">
+            <img src="{{ image.image.url }}" alt="{{ image.product.name }} Image">
+            <p class="product-name">Product Name: {{ image.product.name }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
