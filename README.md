@@ -1,16 +1,21 @@
 Product Management Application
+
 This is a web-based Product Management Application that allows customer users to register, sign in, and manage their product listings. The application provides a user-friendly interface for customers to add, edit, and view their products along with product details and images.
 
 Features
+
 User Registration and Sign In
 
 Users can register with the application by providing their First Name, Last Name, Email ID (unique), and Password.
 Registered users can sign in using their Email ID and Password.
+
 Dashboard
 
 Upon successful sign-in, customers are redirected to the dashboard page.
 The dashboard is login protected, ensuring only authenticated users can access it.
 Navigation elements are available to provide easy access to different sections of the application.
+
+
 Change Password
 
 Authenticated users can change their passwords for added security.
@@ -19,8 +24,8 @@ Product List
 
 Customers can view a list of products they have added.
 Each product entry displays the Product Name, Price, SKU, and Description.
-Add New Product
 
+Add New Product
 Customers can easily add a new product by clicking the "Add Product" button.
 They can enter the Product Name, Price, SKU, and Description for the new product.
 Product Images
@@ -28,15 +33,18 @@ Product Images
 Users can upload product images while adding a new product.
 A maximum of 5 images can be uploaded for each product.
 Each image must not exceed 5MB in size.
+
 Edit Product
 
 Authenticated users can edit the product details for products they have added.
 They can modify the Product Name, Price, SKU, and Description for the existing product.
 Images for the product can also be updated, following the same limitations as during product addition.
+
 View Product Details
 
 Customers can view detailed information about each product they have added.
 The product details include the Product Name, Price, SKU, Description, and associated images.
+
 Technologies Used
 Frontend: HTML, CSS, JavaScript
 Backend: Django
