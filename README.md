@@ -59,17 +59,27 @@ Access the application in your web browser using the server URL.
 
 
 How to Use
+
 Register: Sign up with the application using your First Name, Last Name, Email ID, and Password.
+
 Sign In: Log in using your registered Email ID and Password to access the dashboard.
+
 Dashboard: Navigate through the dashboard to manage your products, change your password, or add new products.
+
 Change Password: From the dashboard, access the "Change Password" section to update your password.
+
 Product List: View a list of products you have added by clicking on the "Product List" section.
+
 Add New Product: Click on the "Add Product" button from the dashboard to add a new product with details and images.
+
 Edit Product: Go to the "Product List," find the product you wish to edit, and click on the "Edit" button to modify the details and images.
+
 View Product Details: To see the detailed information of a particular product, select it from the "Product List."
 
 
+
 Notes
+
 This application does not support simultaneous usage by multiple users. It is intended for individual use.
 Please ensure that the images you upload do not exceed the size limit mentioned (5MB).
 For any issues or feedback, please feel free to create an issue in the GitHub repository.
